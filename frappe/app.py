@@ -413,7 +413,7 @@ def sync_database(rollback: bool) -> bool:
 
 
 def serve(
-	port=8005, profile=False, no_reload=False, no_threading=False, site=None, sites_path="."
+	port=8000, profile=False, no_reload=False, no_threading=False, site=None, sites_path="."
 ):
 	global application, _site, _sites_path
 	_site = site
@@ -428,7 +428,7 @@ def serve(
 		application = application_with_statics()
 
 	application.debug = True
-	application.config = {"SERVER_NAME": "127.0.0.1:8005"}
+	application.config = {"SERVER_NAME": "127.0.0.1:8000"}
 
 	log = logging.getLogger("werkzeug")
 	log.propagate = False
