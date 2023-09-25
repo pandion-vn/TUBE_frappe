@@ -922,7 +922,7 @@ def run_ui_tests(
 
 
 @click.command("serve")
-@click.option("--port", default=8000)
+@click.option("--port", default=8005)
 @click.option("--profile", is_flag=True, default=False)
 @click.option("--noreload", "no_reload", is_flag=True, default=False)
 @click.option("--nothreading", "no_threading", is_flag=True, default=False)
